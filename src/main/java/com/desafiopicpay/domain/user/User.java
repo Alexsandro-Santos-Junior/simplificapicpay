@@ -2,10 +2,7 @@ package com.desafiopicpay.domain.user;
 
 import com.desafiopicpay.dtos.UserDTO;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -19,6 +16,7 @@ import java.math.BigDecimal;
 @Setter
 // ... Cria o construtor que recebe todos parametros da classe ...
 @AllArgsConstructor
+@NoArgsConstructor
 // ... Definimos a chave primaria dessa entidade ...
 @EqualsAndHashCode(of = "id")
 public class User {
@@ -47,6 +45,7 @@ public class User {
         this.balance = data.balance();
         this.userType = data.userType();
         this.password = data.password();
+        this.document = data.document();
         this.email = data.email();
 
     }
